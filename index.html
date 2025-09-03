@@ -3,224 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <title>Merch — Athenah Music</title>
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- Google Analytics (same IDs you use elsewhere) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HFM13WESB"></script>
-  <link rel="stylesheet" href="/style.css">
-  <script src="/script.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-7HFM13WESB');   <!-- old -->
     gtag('config', 'G-6ERTNKB52T');   <!-- new -->
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css">
-  <script src="/script.js"></script>
   <style>
-    :root {
-      --brand: #2B677D;   /* your top band color */
-      --accent: #4AAACD;
-      --text: #fff;
-      --muted: #aaa;
-      --bg: #000;
-    }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Antonio', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
     }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+
     nav {
-      background: var(--brand);
+      background-color: #2B677D; /* 🎨 Your TOP BAND COLOR */
       padding: 12px;
       text-align: center;
     }
+
     nav a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
     }
-    nav a:hover { text-decoration: underline; }
 
-    header.hero {
-      display: grid;
-      place-items: center;
-      min-height: 40vh;
-      padding: 3rem 1rem;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.75)),
-        url('/images/1websitephoto3.jpeg') center/cover no-repeat;
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
       text-align: center;
     }
-    .hero h1 { font-size: 2.2rem; margin: 0 0 .5rem; }
-    .hero p { margin: .25rem 0; color: #e8f6fc; }
 
-    .content {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2rem 1rem 3rem;
+    main img {
+      max-width: 100%;
+      height: auto;
     }
-
-    /* Coming soon tiles */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );
-      gap: 18px;
-      margin-top: 1.25rem;
-    }
-    .card {
-      position: relative;
-      border: 2px solid var(--brand);
-      border-radius: 12px;
-      overflow: hidden;
-      background: #0b0b0b;
-      min-height: 220px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 1rem;
-    }
-    .card h3 {
-      margin: .2rem 0 .4rem;
-      font-size: 1.05rem;
-      letter-spacing: .3px;
-    }
-    .tag {
-      position: absolute;
-      top: 10px; right: 10px;
-      background: rgba(74,170,205,.9);
-      color: #000;
-      font-weight: 700;
-      padding: 4px 8px;
-      border-radius: 999px;
-      font-size: .75rem;
-    }
-    .ghost {
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-    .actions {
-      margin-top: 28px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-    .btn {
-      border: 2px solid #fff;
-      color: #fff;
-      background: transparent;
-      padding: .7rem 1rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
-      display: inline-block;
-    }
-    .btn:hover { background: rgba(255,255,255,.08); }
 
     footer {
-      background: #111;
+      background-color: #111;
       color: #ccc;
       text-align: center;
-      padding: 24px 12px;
+      padding: 20px;
       margin-top: 40px;
     }
-    footer a { color: #4AAACD; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
   </style>
+
+  <!-- Shortcut blocker -->
+  <script>
+    function disableShortcuts(e) {
+      const forbidden = ["u", "s", "c", "x", "v", "a"];
+      if ((e.ctrlKey || e.metaKey) && forbidden.includes(e.key.toLowerCase())) {
+        e.preventDefault();
+        return false;
+      }
+      if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key))) {
+        e.preventDefault();
+        return false;
+      }
+    }
+    document.addEventListener('keydown', disableShortcuts);
+  </script>
 </head>
-<body>
-  <!-- NAV (root-relative links) -->
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+  <header>
+    <h1>About Athenah</h1>
+  </header>
+
+  <!-- ✅ NAVIGATION BAR WITH COLOR -->
   <nav>
-    <a href="/">Home</a>
+  <a href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
     <a href="/videos/">Videos</a>
-    <a href="/merch/">Merch</a>
     <a href="/links/">Links</a>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div>
-      <h1>Merch — Coming Soon</h1>
-      <p>Limited first-run items and collector editions are on the way.</p>
-      <p class="ghost">Be first to know when they drop.</p>
-      <div class="actions">
-        <!-- Use your existing Mailchimp list -->
-        <a class="btn" href="https://athenah.us5.list-manage.com/subscribe/post?u=c8d37e21dec9318692bc9a80a&amp;id=b7ee71454b" target="_blank" rel="noopener">Notify Me</a>
-        <a class="btn" href="/contact/">Contact</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTENT -->
-  <main class="content">
-    <h2 style="margin:0 0 .5rem;">Planned Drops</h2>
-    <p class="ghost" style="margin:.25rem 0 1.25rem;">
-      Sneak peek of categories (designs in progress).
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <span class="tag">Soon</span>
-        <div>
-          <h3>T-Shirts</h3>
-          <p class="ghost">Soft cotton, limited artwork prints.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <span class="tag">Soon</span>
-        <div>
-          <h3>Art Prints</h3>
-          <p class="ghost">High-quality color prints of original works.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <span class="tag">Soon</span>
-        <div>
-          <h3>Vinyl / CDs</h3>
-          <p class="ghost">Collector editions, small batches.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <span class="tag">Soon</span>
-        <div>
-          <h3>Hardcover Bio (First Edition)</h3>
-          <p class="ghost">Numbered copies with color plates.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Placeholder for a future Printful/Shop grid mount -->
-    <!-- <div id="store-mount"></div> -->
+  <main> 
+    <img src="/images/1aboutathenah2.png" alt="About Athenah" />
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <hr />
     <p>© Athenah Music 1989–2025. All rights reserved.</p>
+    <p>"Athenah Music is the name I've used for my music, performances, and creative work since 1989..."</p>
     <p>
-      <a href="https://www.facebook.com/athenahsongs1">Facebook</a> •
-      <a href="https://www.instagram.com/athenahmusicofficial/">Instagram</a> •
-      <a href="https://substack.com/@athenah">Substack</a> •
-      <a href="mission.html">Mission</a> 
+      <a href="https://www.facebook.com/athenahsongs1">Facebook</a> • 
+      <a href="https://www.instagram.com/athenahmusicofficial/">Instagram</a> • 
+      <a href="https://substack.com/@athenah">Substack</a> • 
       <a href="/terms/">Terms</a>
     </p>
     <p>
-      <img src="https://visitor-badge.laobi.icu/badge?page_id=athenahmusic_merch_v1"
-           alt="Visitor Count">
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=athenahmusic_about_unique20250827" alt="Visitor Count">
     </p>
   </footer>
 </body>
