@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HFM13WESB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7HFM13WESB');   <!-- old -->
+    gtag('config', 'G-6ERTNKB52T');   <!-- new -->
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #2B677D; /* 🎨 Your TOP BAND COLOR */
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    main img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+
+  <!-- Shortcut blocker -->
+  <script>
+    function disableShortcuts(e) {
+      const forbidden = ["u", "s", "c", "x", "v", "a"];
+      if ((e.ctrlKey || e.metaKey) && forbidden.includes(e.key.toLowerCase())) {
+        e.preventDefault();
+        return false;
+      }
+      if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key))) {
+        e.preventDefault();
+        return false;
+      }
+    }
+    document.addEventListener('keydown', disableShortcuts);
+  </script>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+  <header>
+    <h1>About Athenah</h1>
+  </header>
+
+  <!-- ✅ NAVIGATION BAR WITH COLOR -->
+  <nav>
+  <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/videos/">Videos</a>
+    <a href="/links/">Links</a>
+  </nav>
+
+  <main> 
+    <img src="/images/1aboutathenah2.png" alt="About Athenah" />
+  </main>
+
+  <footer>
+    <hr />
+    <p>© Athenah Music 1989–2025. All rights reserved.</p>
+    <p>"Athenah Music is the name I've used for my music, performances, and creative work since 1989..."</p>
+    <p>
+      <a href="https://www.facebook.com/athenahsongs1">Facebook</a> • 
+      <a href="https://www.instagram.com/athenahmusicofficial/">Instagram</a> • 
+      <a href="https://substack.com/@athenah">Substack</a> • 
+      <a href="/terms/">Terms</a>
+    </p>
+    <p>
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=athenahmusic_about_unique20250827" alt="Visitor Count">
+    </p>
+  </footer>
+</body>
+</html>
