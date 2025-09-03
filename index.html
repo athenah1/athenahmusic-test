@@ -1,287 +1,105 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
-<head> 
-  <meta charset="UTF-8" /> 
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <title>Athenah Music – Home</title>
+  <link rel="stylesheet" href="style.css" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HFM13WESB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-7HFM13WESB');  // athenahmusic.com
-    gtag('config', 'G-6ERTNKB52T');  // athenah.com (new stream)
+    gtag('config', 'G-7HFM13WESB');   <!-- old -->
+    gtag('config', 'G-6ERTNKB52T');   <!-- new -->
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet" />
+
   <style>
-    :root {
-      --background: #7ECFED;
-      --accent: #4AAACD;
-      --text: white;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: 'Antonio', sans-serif;
-      background: #000;
-      color: var(--text);
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
     }
 
     nav {
-      background-color: #2B677D;
-      padding: 1em;
+      background-color: #2B677D; /* 🎨 Your TOP BAND COLOR */
+      padding: 12px;
       text-align: center;
     }
 
     nav a {
       color: white;
-      margin: 0 1em;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
-      font-size: 18px;
     }
 
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 2em;
-      background: url('/images/1websitephoto3.jpeg') no-repeat center center/cover;  
-      min-height: 100vh;
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    .photo-section {
-      width: 60%;
-    }
-
-    .music-player {
-      width: 35%;
-      background-color: transparent;
-      border: 7px solid #2B677D;
-      border-radius: 12px;
-      padding: 1em 1.5em;
-      position: sticky;
-      top: 1em;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-
-    .music-player h1 {
-      text-align: center;
-      font-size: 26px;
-      margin: 0.5em 0;
-    }
-
-    .play-button {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1em;
-    }
-
-    .play-button button {
-      background: var(--accent);
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
-      color: white;
-      cursor: pointer;
-    }
-
-    .song {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.75em 0;
-      font-size: 14px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .song button {
-      background: var(--accent);
-      color: white;
-      border: none;
-      padding: 3px 8px;
-      font-size: 12px;
-      cursor: pointer;
-      border-radius: 5px;
-      margin-left: 10px;
-    }
-    .track .dur {
-    font-size: 12px;   /* smaller size */
-    font-weight: normal;
-    rgba(255,255,255,0.6);  /* softer white */
-    margin-left: 6px;  /* small spacing after title */
-   }
-
-    /* Song length styling */
-    .song-length {
-    font-size: 12px;    /* smaller than title */
-    font-weight: normal;
-    color: #aaa;        /* lighter gray */
-    margin-left: 6px;   /* spacing after title */
-   }
-
-    audio {
-      display: none;
-    }
-
-    #lyrics-box {
-      margin-top: 1em;
-      padding: 11px;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      font-size: 14px;
-      white-space: pre-wrap;
-      display: none;
-    }
-
-    .background-extension {
-      background: url('images/1performance_statement.png') no-repeat center center/cover;
-      min-height: 100vh;
-      padding: 2em;
-      position: relative;
-      background-size: cover;
-    }
-
-    #signup-form {
-      max-width: 400px;
-      margin: 0 auto;
-      background: var(--accent);
-      padding: 2em;
-      border-radius: 10px;
+    main {
+      padding: 20px;
       text-align: center;
     }
 
-    #signup-form h2 {
-      color: white;
-      margin-bottom: 1em;
-    }
-
-    #signup-form input {
-      width: 100%;
-      padding: 0.75em;
-      margin: 0.5em 0;
-      font-size: 16px;
-      border: none;
-      border-radius: 4px;
-      background: white;
-      color: black;
-    }
-
-    #signup-form button {
-      width: 100%;
-      padding: 0.75em;
-      font-size: 16px;
-      background: none;
-      color: white;
-      border: 2px solid white;
-      cursor: pointer;
+    main img {
+      max-width: 100%;
+      height: auto;
     }
 
     footer {
-      background-color: #2B677D;
-      color: white;
+      background-color: #111;
+      color: #ccc;
       text-align: center;
-      padding: 2em 1em;
-    }
-
-    footer a {
-      color: #4AAACD;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-      }
-      .music-player, .photo-section {
-        width: 100%;
-      }
-      .music-player {
-        position: static;
-        max-height: none;
-      }
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
+
+  <!-- Shortcut blocker -->
+  <script>
+    function disableShortcuts(e) {
+      const forbidden = ["u", "s", "c", "x", "v", "a"];
+      if ((e.ctrlKey || e.metaKey) && forbidden.includes(e.key.toLowerCase())) {
+        e.preventDefault();
+        return false;
+      }
+      if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key))) {
+        e.preventDefault();
+        return false;
+      }
+    }
+    document.addEventListener('keydown', disableShortcuts);
+  </script>
 </head>
-<body>
-  <!-- Navigation -->
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+  <header>
+    <h1>About Athenah</h1>
+  </header>
+
+  <!-- ✅ NAVIGATION BAR WITH COLOR -->
   <nav>
-    <a href="/">Home</a>
+  <a href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
     <a href="/videos/">Videos</a>
-    <a href="/merch/">Merch</a>
     <a href="/links/">Links</a>
   </nav>
 
-  <section class="hero">
-    <div class="photo-section"></div>
-    <div class="music-player">
-      <h1>Athenah Music</h1>
-      <div class="play-button">
-        <button class="svg-button" onclick="togglePlay()">
-          <svg viewBox="0 0 100 100" width="30" height="30">
-            <polygon points="35,30 70,50 35,70" fill="white" />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Song List -->
-<div class="song"><span onclick="playSong(0)">Hell Takes A Hit <span class="song-length">2:36</span></span><button onclick="showLyrics(0)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(1)">Love Without Question <span class="song-length">2:30</span></span><button onclick="showLyrics(1)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(2)">Dreaming Of A Sky <span class="song-length">2:17</span></span><button onclick="showLyrics(2)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(3)">Sweetness And Light <span class="song-length">2:49</span></span><button onclick="showLyrics(3)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(4)">I Cant Make It Have Meaning For Me <span class="song-length">3:08</span></span><button onclick="showLyrics(4)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(5)">Heart To Mind <span class="song-length">2:47</span></span><button onclick="showLyrics(5)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(6)">Atmospheric <span class="song-length">3:03</span></span><button onclick="showLyrics(6)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(7)">Voices And Violins <span class="song-length">3:15</span></span><button onclick="showLyrics(7)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(8)">Things You Would Say To A Friend <span class="song-length">2:43</span></span><button onclick="showLyrics(8)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(9)">Shawn Colvin Song <span class="song-length">2:13</span></span><button onclick="showLyrics(9)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(10)">Saharan Dust <span class="song-length">2:58</span></span><button onclick="showLyrics(10)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(11)">Notes <span class="song-length">3:13</span></span><button onclick="showLyrics(11)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(12)">Rumble <span class="song-length">3:40</span></span><button onclick="showLyrics(12)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(13)">Joni M Song <span class="song-length">1:48</span></span><button onclick="showLyrics(13)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(14)">Love's A Light <span class="song-length">2:54</span></span><button onclick="showLyrics(14)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(15)">Love's A Light (Instrumental) <span class="song-length">2:57</span></span><button onclick="showLyrics(15)">Lyrics</button></div>
-<div class="song"><span onclick="playSong(16)">Feelings On The Bone <span class="song-length">2:27</span></span><button onclick="showLyrics(16)">Lyrics</button></div>     
-
-<audio id="audio-player" controls style="width:100%; margin-top:1em;" preload="none" playsinline></audio>      
-
-<!-- Lyrics Popup -->
-<dialog id="lyricsModal" aria-labelledby="lyricsTitle">
-  <form method="dialog" style="margin:0">
-    <header style="display:flex;justify-content:space-between;align-items:center;gap:1rem">
-      <h3 id="lyricsTitle" style="margin:0">Lyrics</h3>
-      <button value="close" aria-label="Close">✕</button>
-    </header>
-    <pre id="lyricsBody" style="white-space:pre-wrap;margin-top:1rem;max-height:60vh;overflow:auto"></pre>
-  </form>
-</dialog>
- </div>        <!-- end .music-player -->
-</section>    <!-- end .hero -->     
-
-<style>
-  #lyricsModal { max-width: 680px; width: 92%; padding: 1.25rem; border: none; border-radius: 14px; }
-  #lyricsModal::backdrop { background: rgba(0,0,0,.5); }
-</style>
-
-<section class="background-extension">
-    <form id="signup-form" action="https://athenah.us5.list-manage.com/subscribe/post?u=c8d37e21dec9318692bc9a80a&amp;id=b7ee71454b" method="post" target="_blank">
-      <h2>🎶 I'm Listening</h2>
-      <input type="email" name="EMAIL" placeholder="Your email address" required />
-      <input type="text" name="PHONE" placeholder="Phone (optional)" />
-      <button type="submit">Join In</button>
-    </form>
-  </section>
+  <main> 
+    <img src="/images/1aboutathenah2.png" alt="About Athenah" />
+  </main>
 
   <footer>
     <hr />
@@ -290,98 +108,12 @@
     <p>
       <a href="https://www.facebook.com/athenahsongs1">Facebook</a> • 
       <a href="https://www.instagram.com/athenahmusicofficial/">Instagram</a> • 
-      <a href="https://substack.com/@athenah">Substack</a> •
-      <a href="mission.html">Mission</a> •
+      <a href="https://substack.com/@athenah">Substack</a> • 
       <a href="/terms/">Terms</a>
     </p>
     <p>
-      <img src="https://visitor-badge.laobi.icu/badge?page_id=athenahmusic.index" alt="Visitor Count">
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=athenahmusic_about_unique20250827" alt="Visitor Count">
     </p>
   </footer>
-
-  <script>
-const songs = [
-  "https://athx-files.b-cdn.net/Helnoguh13z.mp3",    // 0: Hell Takes a Hit
-  "https://athx-files.b-cdn.net/Lovnoguh10z.mp3",    // 1: Love Without Question
-  "https://athx-files.b-cdn.net/Drenoguh9z.mp3",     // 2: Dreaming of a Sky
-  "https://athx-files.b-cdn.net/Swenoguh3z.mp3",     // 3: Sweetness and Light
-  "https://athx-files.b-cdn.net/Icanoguh12z.mp3",    // 4: I Can't Make It Have Meaning for Me
-  "https://athx-files.b-cdn.net/Heanoguh14z.mp3",    // 5: Heart to Mind
-  "https://athx-files.b-cdn.net/Atmnoguh1z.mp3",     // 6: Atmospheric
-  "https://athx-files.b-cdn.net/Voinoguh2z.mp3",     // 7: Voices and Violins
-  "https://athx-files.b-cdn.net/Thinnoguh4z.mp3",    // 8: Things You Would Say to a Friend
-  "https://athx-files.b-cdn.net/Shanoguh5z.mp3",     // 9: Shawn Colvin Song
-  "https://athx-files.b-cdn.net/Sahnoguh6z.mp3",     // 10: Saharan Dust
-  "https://athx-files.b-cdn.net/Notnoguh8z.mp3",     // 11: Notes
-  "https://athx-files.b-cdn.net/Rumnoguh7z.mp3",     // 12: Rumble
-  "https://athx-files.b-cdn.net/Jonnoguh11z.mp3",    // 13: Joni M Song
-  "https://athx-files.b-cdn.net/Lovnoguh15z.mp3",    // 14: Love's A Light
-  "https://athx-files.b-cdn.net/Linoguh15z.mp3",      // 15: Love's A Light instrumental
-  "https://athx-files.b-cdn.net/Feenoguh17z.mp3"     // 16: Feelings on the Bone
-];  
-
-// We'll fill this from the JSON file
-let lyrics = [];
-
-// Load /lyrics.json from your site root
-fetch('/lyrics.json', { cache: 'no-store' })
-  .then(res => res.json())
-  .then(data => {
-    // Your JSON is an array of { title, lyrics }
-    lyrics = Array.isArray(data) ? data.map(item => item.lyrics || "") : [];
-    // console.log('Loaded lyrics entries:', lyrics.length);
-  })
-  .catch(err => console.error('Lyrics load error:', err));
-
-const audioPlayer = document.getElementById("audio-player");
-const lyricsBox   = document.getElementById("lyrics-box");
-
-audioPlayer.src = songs[0];      // default track
-audioPlayer.load();              // force the browser to load it
-    
-function playSong(index) {
-  audioPlayer.pause();
-  audioPlayer.currentTime = 0;
-  audioPlayer.src = songs[index];
-  audioPlayer.load();
-  audioPlayer.play().catch(() => {
-    console.log("Tap the play button to start audio.");
-  });
-}
-
-function togglePlay() {
-  if (audioPlayer.paused) {
-    audioPlayer.play();
-  } else {
-    audioPlayer.pause();
-  }
-}
-
-function showLyrics(index) {
-  const modal   = document.getElementById("lyricsModal");
-  const body    = document.getElementById("lyricsBody");
-  const titleEl = document.getElementById("lyricsTitle");
-
-  // derive the title from the clicked row (without the time)
-  const rows = document.querySelectorAll(".song");
-  const row  = rows[index];
-  let titleText = "Lyrics";
-  if (row && row.firstElementChild) {
-    const node = row.firstElementChild.childNodes[0]; // text before the time <span>
-    titleText = (node && node.textContent ? node.textContent : "Lyrics").trim();
-  }
-
-  titleEl.textContent = titleText;
-  body.textContent = (typeof lyrics !== "undefined" && lyrics[index] && lyrics[index].trim())
-    ? lyrics[index]
-    : "Lyrics coming soon.";
-
-  if (modal && typeof modal.showModal === "function") {
-    modal.showModal();
-  } else {
-    alert(body.textContent); // fallback if <dialog> not supported
-  }
-}
-  </script>
 </body>
 </html>
