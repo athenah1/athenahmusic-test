@@ -1,120 +1,140 @@
-<!DOCTYPE html>  
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-
+  <meta charset="UTF-8">
+  <title>About Athenah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex" />
+  <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet" />
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HFM13WESB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-7HFM13WESB');   <!-- old -->
-    gtag('config', 'G-6ERTNKB52T');   <!-- new -->
+    gtag('config', 'G-7HFM13WESB');
+    gtag('config', 'G-TF7Z6JQ3T0');
   </script>
-
-  <style>
+  <!-- End Google Analytics -->
+    <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
-
-    header {
-      background-color: #111;
-      padding: 20px;
-      text-align: center;
-    }
+  margin: 0;
+  font-family: 'Antonio', sans-serif;
+  background: url('images/1aboutimage.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #000; /* ensures text is readable */
+}
 
     nav {
-      background-color: #2B677D; /* 🎨 Your TOP BAND COLOR */
-      padding: 12px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
+      background-color: #2B677D;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    nav a {
+      text-decoration: none;
+      color: #1E1E2F;
     }
 
     main {
-      padding: 20px;
-      text-align: center;
-    }
-
-    main img {
-      max-width: 100%;
-      height: auto;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     footer {
-      background-color: #111;
-      color: #ccc;
+      background-color: #fff;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+
+    .song-list {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .social-links a {
+      display: block;
+      margin-top: 5px;
+      color: #000;
+      word-break: break-word;
     }
   </style>
+</head>  <!-- ✅ Properly close the <head> -->
+<body>   <!-- ✅ Start the <body> content -->
 
-  <!-- Shortcut blocker -->
-  <script>
-    function disableShortcuts(e) {
-      const forbidden = ["u", "s", "c", "x", "v", "a"];
-      if ((e.ctrlKey || e.metaKey) && forbidden.includes(e.key.toLowerCase())) {
-        e.preventDefault();
-        return false;
-      }
-      if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key))) {
-        e.preventDefault();
-        return false;
-      }
-    }
-    document.addEventListener('keydown', disableShortcuts);
-  </script>
-</head>
+<nav>
+  <a href="/athenahmusic-cloudflare-website/">Home</a>
+  <a href="/athenahmusic-cloudflare-website/about">About</a>
+  <a href="/athenahmusic-cloudflare-website/blog/videos">Blog/Videos</a> 
+  <a href="/athenahmusic-cloudflare-website/links">Links</a>
+</nav>
 
-<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
-
-  <header>
+  <main>
     <h1>About Athenah</h1>
-  </header>
+    <p>
+      Athenah’s music lives at the intersection of poetry, psychology, and emotional truth. Drawing from a life shaped by resilience, reflection, and spiritual complexity, her songs blend layered metaphors with grounded lyrical honesty. Each work is a quiet rebellion against surface-level expression—inviting listeners into deeper landscapes of thought and feeling.
+    </p>
+    <p>
+      While known for her lyric-driven catalog, Athenah also composes instrumental works that echo the same emotional weight and precision. Her orchestral piece <strong>One Life</strong>, composed without formal training, is dedicated to her father—a man remembered for his quiet strength, unwavering support, and kindness.
+    </p>
+    <p>
+      Rather than rely on ornamentation or complexity for its own sake, <em>One Life</em> unfolds with emotional clarity and instinctive structure. It was written as a form of reflection—a way to preserve something honest and timeless. The composition has received high-level evaluations for its voice leading, harmonic development, pacing, and originality. Though not written through academic convention, <em>One Life</em> has been compared in tone and intent to the works of Samuel Barber and Arvo Pärt—not for technique, but for emotional focus and restraint.
+    </p>
+    <p>
+      Athenah continues to defy conventional lanes—bringing together musical instinct, storytelling, and emotional depth that invite listeners to look inward and listen more closely. Her work is as much about what is not said as what is spoken—a quiet invitation to meaning.
+    </p>
 
-  <!-- ✅ NAVIGATION BAR WITH COLOR -->
-  <nav>
-  <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/videos/">Videos</a>
-    <a href="/merch/">Merch</a>
-    <a href="/links/">Links</a>
-  </nav>
-
-  <main> 
-    <img src="/images/1aboutathenah2.png" alt="About Athenah" />
+    <p><strong>Her current catalog of over 150 songs includes:</strong></p>
+    <ul class="song-list">
+      <li>Love’s a light</li>
+      <li>Filters</li>
+      <li>Hell takes a hit</li>
+      <li>Sweetness and light</li>
+      <li>Things you would say to a friend</li>
+      <li>Love without question</li>
+      <li>Saharan dust</li>
+      <li>Atmospheric</li>
+      <li>Shawn Colvin song</li>
+      <li>Joni M song</li>
+      <li>Rumble</li>
+      <li>Dreaming of a sky</li>
+      <li>Heart to mind</li>
+      <li>Voices and violins</li>
+      <li>I can’t make it have meaning for me</li>
+      <li>Short lived days</li>
+      <li>What</li>
+      <li>Feelings on the bone</li>
+      <li>Seasons of a guitar</li>
+      <li>Some of it</li>
+      <li>Where love should be</li>
+      <li>Don’t make it so we have to go back</li>
+      <li>High dive</li>
+      <li>I climbed the stairs</li>
+      <li>Love too good for the times</li>
+      <li>One Life</li>
+      <li>Einstein</li>
+      <li>Breath of Christmas</li>
+    </ul>
   </main>
 
   <footer>
-    <hr />
-    <p>© Athenah Music 1989–2025. All rights reserved.</p>
-    <p>"Athenah Music is the name I've used for my music, performances, and creative work since 1989..."</p>
-    <p>
-      <a href="https://www.facebook.com/athenahsongs1">Facebook</a> • 
-      <a href="https://www.instagram.com/athenahmusicofficial/">Instagram</a> • 
-      <a href="https://substack.com/@athenah">Substack</a> • 
-      <a href="/terms/">Terms</a>
-    </p>
-    <p>
-      <img src="https://visitor-badge.laobi.icu/badge?page_id=athenahmusic_about_unique20250827" alt="Visitor Count">
-    </p>
-  </footer>
+  <hr />
+  <p>© Athenah Music 1989–2025. All rights reserved.</p>
+  <p>"Athenah Music is the name I’ve used for my music, performances, and creative work since 1989..."</p>
+  <p>
+    <a href="https://www.facebook.com/athenahsongs1/">Facebook</a> • 
+    <a href="https://www.instagram.com/athenahmusicofficial/">Instagram</a> • 
+    <a href="https://substack.com/@athenah">Substack</a> • 
+    <a href="terms.html">Terms</a>
+  </p>
+  <p><img src="https://visitor-badge.laobi.icu/badge?page_id=athenahmusic.index" alt="Visitor Count" /></p>
+</footer>
+
 </body>
 </html>
