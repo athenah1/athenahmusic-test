@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://athenah.com/sitemap.xml
+Sitemap: https://athenahmusic.com/sitemap.xml

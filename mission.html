@@ -1,0 +1,106 @@
+<!doctype html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Athenah • Access Mission</title>
+  <meta name="description" content="Access-first principles for this site and a simple Start Here with the most important links." />
+  <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js"></script>
+  <style>
+    :root { --bg:#0f0f10; --card:#151518; --ink:#e9e9ea; --muted:#b7b7bd; --accent:#98e7d8; --border:#26262a; --shadow:rgba(0,0,0,.35); }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#f8f8fb; --card:#ffffff; --ink:#171717; --muted:#555; --border:#e7e7ee; --shadow:rgba(0,0,0,.12); }
+    }
+    html,body{height:100%}
+    body{margin:0;font:16px/1.6 'Antonio', system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";background:var(--bg);color:var(--ink)}
+    .wrap{max-width:72ch;margin:0 auto;padding:3rem 1.25rem}
+    header.page{display:grid;gap:.5rem;margin-bottom:1.5rem}
+    h1{font-size:clamp(1.8rem,2.2vw + 1rem,2.6rem);line-height:1.15;letter-spacing:.2px;margin:0}
+    h2{font-size:clamp(1.2rem,.8vw + 1rem,1.6rem);margin:2rem 0 .25rem}
+    p{margin:.5rem 0 1rem}
+    .updated{color:var(--muted);font-size:.95rem}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.1rem;box-shadow:0 10px 24px var(--shadow)}
+    .grid{display:grid;gap:1rem}
+    ul{margin:.25rem 0 1rem 1.25rem}
+    li{margin:.25rem 0}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .pill{display:inline-block;padding:.1rem .5rem;border:1px solid var(--border);border-radius:999px;font-size:.82rem;color:var(--muted)}
+    .btn-row{display:flex;gap:.5rem;align-items:center;margin:.25rem 0 1.25rem}
+    button.print{border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--ink);padding:.5rem .8rem;cursor:pointer}
+    button.print:hover{filter:brightness(1.05)}
+    hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
+    @media print{.btn-row{display:none!important}body{background:white;color:black}.card{box-shadow:none;border-color:#ddd}a::after{content:" (" attr(href) ")";font-size:.9em;color:#333}}
+  </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HFM13WESB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-7HFM13WESB');  // athenahmusic.com
+    gtag('config', 'G-6ERTNKB52T');  // athenah.com (new stream)
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="page">
+      <h1>Access Mission</h1>
+      <p class="updated">Last updated: <time datetime="2025-09-01">September 1, 2025</time></p>
+      <div class="btn-row">
+        <button class="print" onclick="window.print()" aria-label="Print or save as PDF">Print / Save PDF</button>
+        <span class="pill">Public page</span>
+      </div>
+    </header>
+
+    <main class="grid" id="mission">
+      <section class="card" aria-labelledby="why">
+        <h2 id="why">Why this page exists</h2>
+        <p>This page is a promise that the essentials stay visible, verifiable, and easy to save.</p>
+      </section>
+
+      <section class="card" aria-labelledby="principles">
+        <h2 id="principles">Principles</h2>
+        <ul>
+          <li><strong>Open access.</strong> The core info (music, shows, story, press kit) is readable without walls or gimmicks.</li>
+          <li><strong>Clarity over clutter.</strong> Pages load as plain HTML + CSS. If scripts fail, the words still show.</li>
+          <li><strong>Traceable updates.</strong> Every evergreen page includes a visible “Last updated” date.</li>
+          <li><strong>Portable by design.</strong> You can print or save the essentials as clean PDFs.</li>
+          <li><strong>Findable.</strong> A plain <code>/start</code> page and a simple navigation keep the key links in one place.</li>
+          <li><strong>Accountability.</strong> When something changes, the <code>/status</code> page notes it.</li>
+          <li><strong>Backed up.</strong> Critical pages are mirrored and archived so they don’t vanish.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="start-here">
+        <h2 id="start-here">Start here</h2>
+        <p>Stable links to my main site (absolute URLs so they work from anywhere):</p>
+        <ul>
+          <li><a href="https://athenah.com/">athenah.com/</a> – Home</li>
+          <li><a href="https://athenah.com/about/">athenah.com/about/</a> – About</li>
+          <li><a href="https://athenah.com/videos/">athenah.com/videos/</a> – Videos</li>
+          <li><a href="https://athenah.com/blog/">athenah.com/blog/</a> – Blog</li>
+          <li><a href="https://athenah.com/merch/">athenah.com/merch/</a> – Merch</li>
+          <li><a href="https://athenah.com/links/">athenah.com/links/</a> – Links hub</li>
+          <li><a href="https://substack.com/@athenah">substack.com/@athenah</a> – Newsletter (off‑site)</li>
+          <li><a href="https://athenah.com/terms/">athenah.com/terms/</a> – Terms</li>
+          <li><a href="#" aria-current="page">This page</a> – Access Mission</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="verify">
+        <h2 id="verify">How to verify & cite</h2>
+        <p>When a page includes factual claims (dates, credits, venues), it links its sources, and notes how to verify. If you spot an error or need clarification, please see <a href="https://athenah.com/links/">athenah.com/links/</a>.</p>
+      </section>
+    </main>
+
+    <hr>
+    <footer class="updated">© <span id="year">1989–2025</span> Athenah Music • Access first. Always.</footer>
+  </div>
+  <script>
+    (function(){var y=document.getElementById('year');if(y) y.textContent='1989–'+ new Date().getFullYear();})();
+  </script>
+</body>
+</html>
