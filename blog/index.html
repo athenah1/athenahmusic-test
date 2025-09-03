@@ -3,31 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index" />
-  <title>Blog & Video | Athenah</title>
+  <title>Blog - Athenah Music</title>
+  <link rel="stylesheet" href="/style.css" />
 
-  <!-- Google Analytics for athenahmusic.com -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HFM13WESB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  // Track both domains
-  gtag('config', 'G-7HFM13WESB');
-  gtag('config', 'G-TF7Z6JQ3T0');
-</script>
-
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-7HFM13WESB');   <!-- old -->
+    gtag('config', 'G-6ERTNKB52T');   <!-- new -->
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
+      background-color: #B9EAFF;
       color: #333;
-    }
+    } 
 
     header {
-      background: #4AAACD;
+      background-color: #2B677D;
       color: white;
       padding: 1em;
       text-align: center;
@@ -35,7 +33,7 @@
 
     nav {
       text-align: center;
-      margin: 1em 0;
+      margin: 1.2em 0;
     }
 
     nav a {
@@ -44,165 +42,128 @@
       color: #4AAACD;
       font-weight: bold;
     }
-
-    main {
-      padding: 20px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      max-width: 100%;
-    }
-
-    .tabs-container {
-      display: flex;
-      flex-direction: column;
-      margin-top: 2em;
-    }
-
-    .tab-buttons {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .tab-buttons button {
-      background-color: #e0e0e0;
-      border: none;
-      padding: 10px;
-      margin-bottom: 5px;
-      text-align: left;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .tab-buttons button.active {
-      background-color: #4AAACD;
+  
+  footer {
+      background-color: #111111;
       color: white;
-    }
-
-    .tab-content {
-      display: none;
-      margin-top: 1em;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    #mc_embed_signup {
-      background: #fff;
-      clear: both;
-      font: 14px Helvetica, Arial, sans-serif;
-      padding: 1em;
-      border-radius: 8px;
-      max-width: 600px;
-      margin: 2em auto;
-    }
-
-    footer {
-      background: #eee;
-      padding: 1em;
       text-align: center;
-      font-size: 0.9em;
-      color: #666;
+      padding: 2em 1em;
     }
 
-    @media (min-width: 768px) {
-      .tabs-container {
-        flex-direction: row;
-      }
-      .tab-buttons {
-        width: 200px;
-        margin-right: 20px;
-      }
+    footer a {
+      color: #40E0D0;
+      text-decoration: none;
     }
-  </style>
+
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Athenah | Blog & Video</h1>
-  </header>
-
+  <!-- Navigation -->
   <nav>
-  <a href="/athenahmusic-cloudflare-website/">Home</a>
-  <a href="/athenahmusic-cloudflare-website/about">About</a>
-  <a href="/athenahmusic-cloudflare-website/blog/videos">Blog/Videos</a>
-  <a href="/athenahmusic-cloudflare-website/links">Links</a>
-</nav>
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/blog/">Blog</a>
+  <a href="/videos/">Videos</a>
+  <a href="/merch/">Merch</a> 
+  <a href="/links/">Links</a>
+  </nav>
 
-  <main>
-    <!-- Substack Blog Embed -->
-    <iframe src="https://athenah.substack.com/embed" height="400" style="border:1px solid #ccc; max-width: 100%;" frameborder="0" scrolling="no"></iframe>
+  <!-- Blog Content -->
+  <main class="blog-container">
+    <h1>Blog</h1>
 
-    <!-- Vertical Tabs for Video Platforms -->
-    <div class="tabs-container">
-      <div class="tab-buttons">
-        <button class="tab-btn active" onclick="showTab(0)">Substack Videos</button>
-        <button class="tab-btn" onclick="showTab(1)">YouTube</button>
-        <button class="tab-btn" onclick="showTab(2)">Vimeo</button>
-      </div>
+    <article class="blog-post">
+  <h2>The Transformative Power of Creativity: A Journey to Mental Wellness</h2>
 
-      <div>
-        <div class="tab-content active">
-          <iframe src="https://athenah.substack.com/embed/videos" title="Substack Videos"></iframe>
-        </div>
-        <div class="tab-content">
-          <iframe src="https://www.youtube.com/embed/videoseries?list=YOUR_YOUTUBE_PLAYLIST_ID" title="YouTube Playlist"></iframe>
-        </div>
-        <div class="tab-content">
-          <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID" title="Vimeo Video"></iframe>
-        </div>
-      </div>
-    </div>
+  <p>Welcome to my space, a haven where creativity isn't just an expression, but a pathway to healing and new perspectives. As we traverse through life, we often find ourselves in need of solace and a fresh outlook. This is where the magic of creativity comes into play, offering us not just an escape, but a means to rebuild and rejuvenate our minds.</p>
 
-    <!-- Mailchimp Signup Form -->
-    <div id="mc_embed_signup">
-      <form action="https://athenah.us5.list-manage.com/subscribe/post?u=c8d37e21dec9318692bc9a80a&amp;id=b7ee71454b&amp;f_id=00f3b9edf0"
-        method="post" target="_blank">
-        <h2>🎶 I’m Listening</h2>
-        <div class="mc-field-group">
-          <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
-          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
-        </div>
-        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input type="text" name="b_c8d37e21dec9318692bc9a80a_b7ee71454b" tabindex="-1" value="">
-        </div>
-        <div>
-          <input type="submit" value="Join In" name="subscribe" class="button">
-        </div>
-      </form>
-    </div>
+  <p><strong>Creativity: The Window to New Worlds</strong><br>
+  Imagine standing before a canvas, your thoughts as your palette. With each stroke of creativity, we paint new realities, different from our daily grind. It's in these moments of artistic freedom that we find our minds exploring avenues untraveled, bringing forth ideas and visions that were previously unimagined.</p>
 
+  <p><strong>Enlightenment through Artistic Expression</strong><br>
+  Art, in all its forms, acts as a conduit for enlightenment. Whether it's through writing, painting, music, or any other form of creative expression, it guides us to places that heal the mind. It’s not just about creating something beautiful; it's about understanding our emotions, our fears, and our dreams.</p>
+
+  <p>This understanding is the first step towards mental wellness. New outlooks for a better life often begin with seeing things differently. The beauty of creativity lies in its ability to present different perspectives. A single piece of art can speak in numerous ways, touching lives differently. It encourages us to look at our problems and joys through a new lens, often leading to unexpected solutions and a greater appreciation of our journey.</p>
+
+  <p><strong>Creativity as a Companion</strong><br>
+  In this space, I believe that creativity is a companion that walks with us. It's a tool for self-discovery and healing. By engaging in creative practices, we open doors to mental resilience and a more balanced life. Join me in this creative expedition. I invite you to explore with me, to dive into the depths of your imagination, and to see where this creative journey takes you.</p>
+
+  <p>Whether you're an artist, a writer, a dreamer, or just someone searching for a new way to view the world, you're in the right place. Together, let's discover how creativity can not only brighten our days but also heal our minds and enrich our lives.</p>
+
+  <footer class="blog-footer-note">
+    Originally published on <a href="https://substack.com/@athenah">Substack</a>
+  </footer>
+</article>
+
+    <!-- Add more posts below -->
+    <!-- Repeat the article structure for each new blog entry -->
   </main>
+
+  <!-- Mailchimp Signup Form -->
+<div id="mc_embed_signup" style="background:#37ACDF; padding: 20px; border-radius: 12px; max-width: 350px; margin: 40px auto; font-family: Arial, sans-serif; text-align: center;">
+  <h2 style="margin-top: 0; font-size: 1.4rem;">🎵 I’m Listening</h2>
+  
+  <form action="https://athenah.us5.list-manage.com/subscribe/post?u=c8d37e21dec9318692bc9a80a&amp;id=b7ee71454b&amp;f_id=00f3b9edf0" method="post" target="_blank" novalidate>
+    
+    <div style="margin-bottom: 12px;">
+      <input type="email" name="EMAIL" placeholder="Email Address *" required 
+        style="width: 100%; max-width: 280px; padding: 10px; font-size: 0.95rem; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+      <input type="text" name="PHONE" placeholder="Phone Number (optional)" 
+        style="width: 100%; max-width: 280px; padding: 10px; font-size: 0.95rem; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+    </div>
+    
+    <div>
+    <button type="submit" style="background-color: #646252; background-color: #49DCF6; padding: 12px 28px; font-size: 1rem; border: none; border-radius: 6px; cursor: pointer; color: white;">
+    Join In
+  </button>
+</div>
+    
+  </form>
+</div>
+
+<!-- Optional Styling -->
+<style>
+  #mc_embed_signup input[type="email"],
+  #mc_embed_signup input[type="tel"] {
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  #mc_embed_signup label {
+    font-size: 1.1rem;
+  }
+
+  #mc-embedded-subscribe {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+</style>
 
   <footer>
   <hr />
   <p>© Athenah Music 1989–2025. All rights reserved.</p>
-  <p>"Athenah Music is the name I’ve used for my music, performances, and creative work since 1989..."</p>
+  <p>"Athenah Music is the name I've used for my music, performances, and creative work since 1989..."</p>
+
   <p>
-    <a href="https://www.facebook.com/athenahsongs1/">Facebook</a> • 
+    <a href="https://www.facebook.com/athenahsongs1">Facebook</a> • 
     <a href="https://www.instagram.com/athenahmusicofficial/">Instagram</a> • 
     <a href="https://substack.com/@athenah">Substack</a> • 
-    <a href="terms.html">Terms</a>
+    <a href="/terms/">Terms</a>
   </p>
-  <p><img src="https://visitor-badge.laobi.icu/badge?page_id=athenahmusic.index" alt="Visitor Count" /></p>
+
+  <p>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=athenahmusic_blog_v2025" alt="Visitor Count">
+  </p>
 </footer>
-
-  <script>
-    function showTab(index) {
-      const buttons = document.querySelectorAll('.tab-btn');
-      const tabs = document.querySelectorAll('.tab-content');
-
-      buttons.forEach(btn => btn.classList.remove('active'));
-      tabs.forEach(tab => tab.classList.remove('active'));
-
-      buttons[index].classList.add('active');
-      tabs[index].classList.add('active');
-    }
-  </script>
 
 </body>
 </html>
