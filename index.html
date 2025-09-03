@@ -3,117 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <title>Blog - Athenah Music</title>
+  <link rel="stylesheet" href="/style.css" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HFM13WESB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-7HFM13WESB');   <!-- old -->
     gtag('config', 'G-6ERTNKB52T');   <!-- new -->
   </script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet" />
   <style>
     body {
+      font-family: sans-serif;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
+      background-color: #B9EAFF;
+      color: #333;
+    } 
 
     header {
-      background-color: #111;
-      padding: 20px;
+      background-color: #2B677D;
+      color: white;
+      padding: 1em;
       text-align: center;
     }
 
     nav {
-      background-color: #2B677D; /* 🎨 Your TOP BAND COLOR */
-      padding: 12px;
       text-align: center;
+      margin: 1.2em 0;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
       margin: 0 15px;
+      text-decoration: none;
+      color: #4AAACD;
       font-weight: bold;
     }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 20px;
+  
+  footer {
+      background-color: #111111;
+      color: white;
       text-align: center;
+      padding: 2em 1em;
     }
 
-    main img {
-      max-width: 100%;
-      height: auto;
+    footer a {
+      color: #40E0D0;
+      text-decoration: none;
     }
 
-    footer {
-      background-color: #111;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
-
-  <!-- Shortcut blocker -->
-  <script>
-    function disableShortcuts(e) {
-      const forbidden = ["u", "s", "c", "x", "v", "a"];
-      if ((e.ctrlKey || e.metaKey) && forbidden.includes(e.key.toLowerCase())) {
-        e.preventDefault();
-        return false;
-      }
-      if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key))) {
-        e.preventDefault();
-        return false;
-      }
-    }
-    document.addEventListener('keydown', disableShortcuts);
-  </script>
+</style>
 </head>
+<body>
 
-<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
-
-  <header>
-    <h1>About Athenah</h1>
-  </header>
-
-  <!-- ✅ NAVIGATION BAR WITH COLOR -->
+  <!-- Navigation -->
   <nav>
   <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/videos/">Videos</a>
-    <a href="/links/">Links</a>
+  <a href="/about/">About</a>
+  <a href="/blog/">Blog</a>
+  <a href="/videos/">Videos</a>
+  <a href="/merch/">Merch</a> 
+  <a href="/links/">Links</a>
   </nav>
 
-  <main> 
-    <img src="/images/1aboutathenah2.png" alt="About Athenah" />
+  <!-- Blog Content -->
+  <main class="blog-container">
+    <h1>Blog</h1>
+
+    <article class="blog-post">
+  <h2>The Transformative Power of Creativity: A Journey to Mental Wellness</h2>
+
+  <p>Welcome to my space, a haven where creativity isn't just an expression, but a pathway to healing and new perspectives. As we traverse through life, we often find ourselves in need of solace and a fresh outlook. This is where the magic of creativity comes into play, offering us not just an escape, but a means to rebuild and rejuvenate our minds.</p>
+
+  <p><strong>Creativity: The Window to New Worlds</strong><br>
+  Imagine standing before a canvas, your thoughts as your palette. With each stroke of creativity, we paint new realities, different from our daily grind. It's in these moments of artistic freedom that we find our minds exploring avenues untraveled, bringing forth ideas and visions that were previously unimagined.</p>
+
+  <p><strong>Enlightenment through Artistic Expression</strong><br>
+  Art, in all its forms, acts as a conduit for enlightenment. Whether it's through writing, painting, music, or any other form of creative expression, it guides us to places that heal the mind. It’s not just about creating something beautiful; it's about understanding our emotions, our fears, and our dreams.</p>
+
+  <p>This understanding is the first step towards mental wellness. New outlooks for a better life often begin with seeing things differently. The beauty of creativity lies in its ability to present different perspectives. A single piece of art can speak in numerous ways, touching lives differently. It encourages us to look at our problems and joys through a new lens, often leading to unexpected solutions and a greater appreciation of our journey.</p>
+
+  <p><strong>Creativity as a Companion</strong><br>
+  In this space, I believe that creativity is a companion that walks with us. It's a tool for self-discovery and healing. By engaging in creative practices, we open doors to mental resilience and a more balanced life. Join me in this creative expedition. I invite you to explore with me, to dive into the depths of your imagination, and to see where this creative journey takes you.</p>
+
+  <p>Whether you're an artist, a writer, a dreamer, or just someone searching for a new way to view the world, you're in the right place. Together, let's discover how creativity can not only brighten our days but also heal our minds and enrich our lives.</p>
+
+  <footer class="blog-footer-note">
+    Originally published on <a href="https://substack.com/@athenah">Substack</a>
+  </footer>
+</article>
+
+    <!-- Add more posts below -->
+    <!-- Repeat the article structure for each new blog entry -->
   </main>
 
+  <!-- Mailchimp Signup Form -->
+<div id="mc_embed_signup" style="background:#37ACDF; padding: 20px; border-radius: 12px; max-width: 350px; margin: 40px auto; font-family: Arial, sans-serif; text-align: center;">
+  <h2 style="margin-top: 0; font-size: 1.4rem;">🎵 I’m Listening</h2>
+  
+  <form action="https://athenah.us5.list-manage.com/subscribe/post?u=c8d37e21dec9318692bc9a80a&amp;id=b7ee71454b&amp;f_id=00f3b9edf0" method="post" target="_blank" novalidate>
+    
+    <div style="margin-bottom: 12px;">
+      <input type="email" name="EMAIL" placeholder="Email Address *" required 
+        style="width: 100%; max-width: 280px; padding: 10px; font-size: 0.95rem; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+      <input type="text" name="PHONE" placeholder="Phone Number (optional)" 
+        style="width: 100%; max-width: 280px; padding: 10px; font-size: 0.95rem; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
+    </div>
+    
+    <div>
+    <button type="submit" style="background-color: #646252; background-color: #49DCF6; padding: 12px 28px; font-size: 1rem; border: none; border-radius: 6px; cursor: pointer; color: white;">
+    Join In
+  </button>
+</div>
+    
+  </form>
+</div>
+
+<!-- Optional Styling -->
+<style>
+  #mc_embed_signup input[type="email"],
+  #mc_embed_signup input[type="tel"] {
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  #mc_embed_signup label {
+    font-size: 1.1rem;
+  }
+
+  #mc-embedded-subscribe {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+</style>
+
   <footer>
-    <hr />
-    <p>© Athenah Music 1989–2025. All rights reserved.</p>
-    <p>"Athenah Music is the name I've used for my music, performances, and creative work since 1989..."</p>
-    <p>
-      <a href="https://www.facebook.com/athenahsongs1">Facebook</a> • 
-      <a href="https://www.instagram.com/athenahmusicofficial/">Instagram</a> • 
-      <a href="https://substack.com/@athenah">Substack</a> • 
-      <a href="/terms/">Terms</a>
-    </p>
-    <p>
-      <img src="https://visitor-badge.laobi.icu/badge?page_id=athenahmusic_about_unique20250827" alt="Visitor Count">
-    </p>
-  </footer>
+  <hr />
+  <p>© Athenah Music 1989–2025. All rights reserved.</p>
+  <p>"Athenah Music is the name I've used for my music, performances, and creative work since 1989..."</p>
+
+  <p>
+    <a href="https://www.facebook.com/athenahsongs1">Facebook</a> • 
+    <a href="https://www.instagram.com/athenahmusicofficial/">Instagram</a> • 
+    <a href="https://substack.com/@athenah">Substack</a> • 
+    <a href="/terms/">Terms</a>
+  </p>
+
+  <p>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=athenahmusic_blog_v2025" alt="Visitor Count">
+  </p>
+</footer>
+
 </body>
 </html>
