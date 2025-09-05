@@ -337,7 +337,10 @@ fetch('/lyrics.json', { cache: 'no-store' })
   })
   .catch(err => console.error('Lyrics load error:', err));
 
-const audioPlayer = document.getElementById("audio-player");
+// Create an invisible audio element in JavaScript
+const audioPlayer = new Audio();
+audioPlayer.preload = "none";
+audioPlayer.playsInline = true;    
 const lyricsBox   = document.getElementById("lyrics-box");
 
 audioPlayer.src = songs[0];      // default track
