@@ -337,14 +337,15 @@ fetch('/lyrics.json', { cache: 'no-store' })
   })
   .catch(err => console.error('Lyrics load error:', err));
 
-// Create an invisible audio element in JavaScript
+// single invisible player
 const audioPlayer = new Audio();
-audioPlayer.preload = "none";
-audioPlayer.playsInline = true;    
-const lyricsBox   = document.getElementById("lyrics-box");
+audioPlayer.preload = "metadata";     // quicker headers than "none"
+audioPlayer.playsInline = true;
+audioPlayer.crossOrigin = "anonymous";
 
-audioPlayer.src = songs[0];      // default track
-audioPlayer.load();              // force the browser to load it
+// optional logging
+audioPlayer.addEventListener('error', () => console.log('AUDIO ERROR', audioPlayer.error));
+audioPlayer.addEventListener('canplay', () => console.log('canplay:', audioPlayer.src));
     
 function playSong(index) {
   audioPlayer.pause();
